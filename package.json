@@ -1,6 +1,6 @@
 {
     "name": "form-designer-naiveui",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "好用的vue可视化表单设计器组件",
     "unpkg": "./dist/index.umd.js",
     "jsdelivr": "./dist/index.umd.js",
@@ -23,7 +23,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/sxcode/form-designer-naiveui.git"
+        "url": "git+https://github.com/sx-code/form-designer-naiveui.git"
     },
     "keywords": [
         "表单设计器",
@@ -51,7 +51,7 @@
     "author": "swcode",
     "license": "MIT",
     "bugs": {
-        "url": "https://github.com/sxcode/form-designer-naiveui/issues"
+        "url": "https://github.com/sx-code/form-designer-naiveui/issues"
     },
     "homepage": "http://designer.form-create.com",
     "publishConfig": {
