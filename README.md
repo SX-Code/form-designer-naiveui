@@ -34,14 +34,14 @@
 **NodeJs:**
 
 ```shell
-npm install @form-create/designer@next
+npm i form-designer-naiveui
 ```
 
-请自行导入`ElementPlus`并挂载
+请自行导入`NaiveUI`并挂载
 
 ```js
-import formCreate from '@form-create/element-ui'
-import FcDesigner from '@form-create/designer'
+import formCreate from '@form-create/naive-ui'
+import FcDesigner  from 'form-designer-naiveui'
 
 app.use(formCreate)
 app.use(FcDesigner)
