@@ -4,12 +4,12 @@
     </a>
 </p>
 
-# form-create-designer v3
+# form-create-designer-naiveui
 
 **这个是 Vue3 版本**
 
 [![MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/xaboy/form-create-designer)
-[![github](https://img.shields.io/badge/Author-xaboy-blue.svg)](https://github.com/xaboy)
+[![github](https://img.shields.io/badge/Author-xaboy-blue.svg)](https://github.com/SX-Code)
 
 **form-create-designer-naiveui 是基于 [@form-create/naive-ui](https://github.com/xaboy/form-create) vue3版本实现的表单设计器组件。可以通过拖拽的方式快速创建表单，提高开发者对表单的开发效率，节省开发者的时间。**
 
@@ -20,9 +20,9 @@
 - 自定义ColorPicker组件，便于定制组件颜色
 - 更新部分组件为Vue 3版本
 
-**[文档](http://designer.form-create.com/guide/) | [在线演示](http://form-create.com/v3/designer?fr=github) | [form-create 文档](http://form-create.com/v3/guide/)**
+**[文档](http://designer.form-create.com/guide/) | [在线演示]() | [form-create 文档](http://form-create.com/v3/guide/)**
 
-> 如果对您有帮助，您可以点右上角 "Star" 支持一下 谢谢！本项目可继续完善,如有任何建议或问题[请在这里提出](https://github.com/xaboy/form-create-designer/issues/new)
+> 如果对您有帮助，您可以点右上角 "Star" 支持一下 谢谢！本项目可继续完善,如有任何建议或问题[请在这里提出](https://github.com/SX-Code/form-designer-naiveui/issues)
 
 
 
