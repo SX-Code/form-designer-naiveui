@@ -1,9 +1,3 @@
-<p align="center">
-    <a href="http://www.form-create.com">
-        <img width="200" src="http://file.lotkk.com/form-create.png">
-    </a>
-</p>
-
 # form-create-designer-naiveui
 
 **这个是 Vue3 版本**
@@ -62,7 +56,7 @@ app.use(FcDesigner)
 </template>
 
 <script>
-import En from "@form-create/designer/locale/en.js";
+import En from "form-designer-naiveui/locale/en.js";
 export default {
   data(){
     return {
