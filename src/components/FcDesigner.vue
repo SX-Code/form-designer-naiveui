@@ -1109,9 +1109,6 @@ export default defineComponent({
   --n-label-height: auto !important;
 }
 ._fc-designer .props-set .form-create .n-form-item {
-  grid-template-areas: "label"
-  "blank"
-  "feedback";
   grid-template-rows: minmax(var(--n-label-height), auto) 1fr;
   grid-template-columns: minmax(0, 100%);
   --n-blank-height: 28px !important;
