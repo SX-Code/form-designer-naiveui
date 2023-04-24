@@ -1105,10 +1105,10 @@ export default defineComponent({
 ._fc-m-drag > form > .n-row {
   height: 100%;
 }
-.n-form-item {
+._fc-designer .n-form-item {
   --n-label-height: auto !important;
 }
-.props-set .form-create .n-form-item {
+._fc-designer .props-set .form-create .n-form-item {
   grid-template-areas: "label"
   "blank"
   "feedback";
@@ -1116,7 +1116,7 @@ export default defineComponent({
   grid-template-columns: minmax(0, 100%);
   --n-blank-height: 28px !important;
 }
-.props-set .form-create .n-form-item .n-form-item-label {
+._fc-designer .props-set .form-create .n-form-item .n-form-item-label {
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
