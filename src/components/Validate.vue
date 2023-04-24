@@ -243,6 +243,7 @@ export default defineComponent({
   cursor: pointer;
 }
 ._fc-validate .form-create .n-form-item {
+  display: block;
   grid-template-rows: minmax(var(--n-label-height), auto) 1fr;
   grid-template-columns: minmax(0, 100%);
   --n-blank-height: 28px !important;
