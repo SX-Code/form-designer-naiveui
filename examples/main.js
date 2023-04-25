@@ -48,7 +48,8 @@ import {
   NAlert,
   NTooltip,
   NTabs,
-  NTabPane
+  NTabPane,
+  NTab,
 } from 'naive-ui';
 
 const naive = create({
@@ -58,7 +59,7 @@ const naive = create({
     NPopover, NIcon, NGrid, NGridItem, NRadioButton, NDataTable, NCheckboxGroup,
     NCheckbox, NSkeleton, NTimePicker, NDatePicker, NConfigProvider, NSlider, NRate,
     NColorPicker, NCascader, NUpload, NText, NP, NUploadDragger, NTransfer, NTree, 
-    NAlert, NTooltip, NTabs, NTabPane]
+    NAlert, NTooltip, NTabs, NTabPane, NTab]
 })
 
 const app = createApp(App);

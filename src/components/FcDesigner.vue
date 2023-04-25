@@ -2,10 +2,10 @@
   <n-layout class="_fc-designer" :style="'height:' + dragHeight">
     <n-layout-content>
       <n-layout style="height: 100%" has-sider>
-        <n-layout-sider content-style="padding: 0 10px;" width="266">
+        <n-layout-sider content-style="padding: 0 10px;border-top: 1px solid #ECECEC" width="266" :native-scrollbar="false">
           <template v-for="(item, index) in menuList" :key="index">
             <div class="_fc-l-group">
-              <h4 class="_fc-l-title">{{ item.title }}</h4>
+              <n-divider title-placement="left" class="_fc-l-title">{{ item.title }}</n-divider>
               <draggable
                 :group="{ name: 'default', pull: 'clone', put: false }"
                 :sort="false"
@@ -79,13 +79,31 @@
           width="320"
           v-if="!config || config.showConfig !== false"
         >
-          <n-layout style="width: 100%" class="_fc-r-tabs">
+        <div style="height: 100%; position: relative">
+          <n-layout style="width: 100%;" class="_fc-r-tabs" position="absolute">
             <!-- 右侧边栏标题 -->
             <n-layout-header
-              style="height: 40px; padding: 0 20px"
+              style="height: 40px;"
               class="_fc-r-tabs"
+              position="absolute"
             >
-              <div
+            <n-tabs 
+              type="line"
+              tab-style="height: 39px"
+              justify-content="space-evenly"
+              v-model:value="activeTab"
+              :class="!!activeRule || (config && config.showFormConfig === false) ? '' : 'single'"
+            >
+              <n-tab name="props" v-if="
+                  !!activeRule || (config && config.showFormConfig === false)
+                ">
+                {{ t("designer.config.component") }}
+              </n-tab>
+              <n-tab name="form" v-if="!config || config.showFormConfig !== false">
+                {{ t("designer.config.form") }}
+              </n-tab>
+            </n-tabs>
+              <!-- <div
                 class="_fc-r-tab"
                 :class="{ active: activeTab === 'props' }"
                 v-if="
@@ -94,21 +112,23 @@
                 @click="activeTab = 'props'"
               >
                 {{ t("designer.config.component") }}
-              </div>
-              <div
+              </div> -->
+              <!-- <div
                 class="_fc-r-tab"
                 v-if="!config || config.showFormConfig !== false"
                 :class="{ active: activeTab === 'form' && !!activeRule }"
                 @click="activeTab = 'form'"
               >
                 {{ t("designer.config.form") }}
-              </div>
+              </div> -->
             </n-layout-header>
             <!-- Form -->
-            <n-layout-content
+            <n-layout
               v-show="activeTab === 'form'"
               v-if="!config || config.showFormConfig !== false"
-              content-style="padding: 20px"
+              style="padding: 20px;top:40px"
+              :native-scrollbar="false"
+              position="absolute"
             >
               <DragForm
                 :rule="form.rule"
@@ -116,12 +136,14 @@
                 v-model="form.value.form"
                 v-model:api="form.api"
               ></DragForm>
-            </n-layout-content>
+            </n-layout>
             <!-- Props -->
-            <n-layout-content
+            <n-layout
               v-show="activeTab === 'props'"
-              content-style="padding: 20px;"
               :key="activeRule ? activeRule._id : ''"
+              style="padding: 0 20px;top:40px"
+              :native-scrollbar="false"
+              position="absolute"
             >
               <div class="props-set">
                 <n-divider v-if="showBaseRule">{{
@@ -153,8 +175,9 @@
                   @update:modelValue="validateChange"
                 ></DragForm>
               </div>
-            </n-layout-content>
+            </n-layout>
           </n-layout>
+        </div>
         </n-layout-sider>
         <n-modal v-model:show="preview.state" preset="dialog" :show-icon="false" title="预览" style="width: 800px">
           <ViewForm
@@ -1005,7 +1028,6 @@ export default defineComponent({
 ._fc-l-title {
   font-weight: 600;
   font-size: 14px;
-  margin: 18px 0px 5px;
 }
 
 ._fc-l-item {
@@ -1058,29 +1080,8 @@ export default defineComponent({
   background-color: #ececec;
 }
 
-._fc-r ._fc-r-tabs {
-  display: flex;
-  padding: 0;
-  border-bottom: 1px solid #ececec;
-}
-
-._fc-r ._fc-r-tab {
-  height: 40px;
-  box-sizing: border-box;
-  line-height: 40px;
-  display: inline-block;
-  list-style: none;
-  font-size: 14px;
-  font-weight: 600;
-  color: #303133;
-  position: relative;
-  flex: 1;
-  text-align: center;
-}
-
-._fc-r ._fc-r-tab.active {
-  color: #18a058;
-  border-bottom: 2px solid #18a058;
+._fc-r-tabs .single .n-tabs-bar {
+  width: 0px !important;
 }
 
 .drag-box {

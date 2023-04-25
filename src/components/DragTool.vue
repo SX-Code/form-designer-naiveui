@@ -87,6 +87,7 @@ export default defineComponent({
     box-sizing: border-box;
     padding: 2px;
     outline: 1px dashed #18a058;
+    margin-bottom: 1px;
     overflow: hidden;
     word-wrap: break-word;
     word-break: break-all;
