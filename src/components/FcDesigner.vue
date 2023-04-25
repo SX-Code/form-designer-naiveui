@@ -103,24 +103,6 @@
                 {{ t("designer.config.form") }}
               </n-tab>
             </n-tabs>
-              <!-- <div
-                class="_fc-r-tab"
-                :class="{ active: activeTab === 'props' }"
-                v-if="
-                  !!activeRule || (config && config.showFormConfig === false)
-                "
-                @click="activeTab = 'props'"
-              >
-                {{ t("designer.config.component") }}
-              </div> -->
-              <!-- <div
-                class="_fc-r-tab"
-                v-if="!config || config.showFormConfig !== false"
-                :class="{ active: activeTab === 'form' && !!activeRule }"
-                @click="activeTab = 'form'"
-              >
-                {{ t("designer.config.form") }}
-              </div> -->
             </n-layout-header>
             <!-- Form -->
             <n-layout
