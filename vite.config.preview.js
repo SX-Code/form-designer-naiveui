@@ -6,6 +6,7 @@ export default defineConfig({
     build: {
         cssCodeSplit: true,
         rollupOptions: {
+            input: 'examples/index.html',
             output: {
                 manualChunks: {
                     vue: ['vue'],

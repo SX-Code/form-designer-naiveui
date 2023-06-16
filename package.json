@@ -1,6 +1,6 @@
 {
     "name": "form-designer-naiveui",
-    "version": "1.0.6",
+    "version": "1.0.9",
     "description": "好用的vue可视化表单设计器组件",
     "unpkg": "./dist/index.umd.js",
     "jsdelivr": "./dist/index.umd.js",
@@ -11,6 +11,14 @@
         ".": {
             "import": "./dist/index.es.js",
             "require": "./dist/index.umd.js"
+        },
+        "./locale/en" : {
+            "import": "./locale/en.mjs",
+            "require": "./locale/en.umd.js"
+        },
+        "./locale/zh-cn": {
+            "import": "./locale/zh-cn.mjs",
+            "require": "./locale/zh-cn.umd.js"
         }
     },
     "scripts": {

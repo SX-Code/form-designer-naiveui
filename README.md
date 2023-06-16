@@ -14,7 +14,7 @@
 - 自定义ColorPicker组件，便于定制组件颜色
 - 更新部分组件为Vue 3版本
 
-**[文档](http://designer.form-create.com/guide/) | [在线演示]() | [form-create 文档](http://form-create.com/v3/guide/)**
+**[文档](http://designer.form-create.com/guide/) | [在线演示](http://8.130.38.57:81/form-designer/) | [form-create 文档](http://form-create.com/v3/guide/)**
 
 > 如果对您有帮助，您可以点右上角 "Star" 支持一下 谢谢！本项目可继续完善,如有任何建议或问题[请在这里提出](https://github.com/SX-Code/form-designer-naiveui/issues)
 
@@ -56,7 +56,7 @@ app.use(FcDesigner)
 </template>
 
 <script>
-import En from "form-designer-naiveui/locale/en.js";
+import En from "form-designer-naiveui/locale/en";
 export default {
   data(){
     return {
